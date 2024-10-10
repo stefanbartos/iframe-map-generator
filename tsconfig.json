@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "module": "NodeNext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2016",
+        "noImplicitAny": true,
+        "moduleResolution": "NodeNext",
+        "noEmit": true,
+        "sourceMap": true,
+        "types": [
+            "node"
+        ],
+        "outDir": "dist",
+        "baseUrl": ".",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

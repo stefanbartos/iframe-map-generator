@@ -1,0 +1,29 @@
+{
+  "name": "iframe-map-generator",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20"
+  },
+  "type": "module",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "format": "biome format"
+  },
+  "keywords": [
+    "map",
+    "generator",
+    "iframe"
+  ],
+  "author": "stefan.svinciak@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}
