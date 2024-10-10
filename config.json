@@ -3,18 +3,17 @@
     "markers": [
         {
             "position": [
-                51.5,
-                -0.09,
-                false
+                49.196624,
+                16.607457
             ],
-            "message": "nieco tam"
+            "message": "Brno Worship"
         },
         {
             "position": [
-                51.5,
-                -0.09
+                50.066254,
+                14.458722
             ],
-            "message": "nieco tu"
+            "message": "Toto je Praha"
         }
     ]
 }

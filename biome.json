@@ -1,7 +1,11 @@
 {
     "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
     "linter": {
-        "enabled": false
+        "rules": {
+            "correctness": {
+                "noUnusedImports": "error"
+            }
+        }
     },
     "formatter": {
         "enabled": true,

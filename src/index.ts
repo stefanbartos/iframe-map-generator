@@ -1,13 +1,13 @@
-import fs from 'node:fs';
-
 import config from '../config.json';
+import { CZ_GEO_CENTER, OUTPUT_FILENAME_PATH } from './constants.js';
+import { writeOutput } from './utils.js';
 
 console.log(config);
 
 function createIframe({
   markersScript,
-  center = [51, 0],
-  zoom = 13,
+  center = CZ_GEO_CENTER,
+  zoom = 6,
 }: { markersScript: string; center?: [number, number]; zoom?: number }) {
   return `
     <iframe srcdoc="
@@ -44,13 +44,16 @@ function run() {
       .map(
         (marker) => `
         L.marker([${marker.position[0]}, ${marker.position[1]}])
-          .addTo(map)${marker.message ? `.bindPopup("${marker.message}")` : ''};
+          .addTo(map)${marker.message ? `.bindPopup('${marker.message}')` : ''};
       `,
       )
       .join('\n');
   }
 
-  fs.writeFileSync('iframe.html', createIframe({ markersScript }));
+  const generatedIframe = createIframe({ markersScript });
+
+  writeOutput(generatedIframe);
+  console.log(`\nGENERATED! Iframe is in the folder: "${OUTPUT_FILENAME_PATH}"`);
 }
 
 run();
